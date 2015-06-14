@@ -44,39 +44,28 @@ public class JogadorComparator implements Comparator<Jogador> {
     }
     
     public int comparaNome(String n1, String n2) {
-        if(n1.length() < n2.length()) {
-            for(int i = 0; i <= n1.length(); i++) {
-                if(n1.charAt(i) < n2.charAt(i)) {
-                    if(nome)
-                        return -1;
-                    else
-                        return 1;
-                }
-                if(n1.charAt(i) > n2.charAt(i)) {
-                    if(nome)
-                        return 1;
-                    else
-                        return -1;
-                }
-            }
-        }
-        else {
-            for(int i = 0; i < n2.length(); i++) {
-                if(n1.charAt(i) < n2.charAt(i)) {
-                    if(nome)
-                        return -1;
-                    else
-                        return 1;
-                }
-                if(n1.charAt(i) > n2.charAt(i)) {
-                    if(nome)
-                        return 1;
-                    else
-                        return -1;
-                }
-            }
-        }
+        int maior;
         
+        if(n1.length() < n2.length())
+            maior = n1.length();
+        else
+            maior = n2.length();
+
+        for(int i = 0; i < maior; i++) {
+            if(n1.charAt(i) < n2.charAt(i)) {
+                if(nome)
+                    return -1;
+                else
+                    return 1;
+            }
+            if(n1.charAt(i) > n2.charAt(i)) {
+                if(nome)
+                    return 1;
+                else
+                    return -1;
+            }
+        }
+
         return 0;
     }
     
@@ -84,7 +73,7 @@ public class JogadorComparator implements Comparator<Jogador> {
         if(nome)
             return n1 - n2;
         else
-            return (n1 - n2)*-1;
+            return n2 - n1;
     }
     
 }
