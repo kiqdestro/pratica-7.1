@@ -20,9 +20,9 @@ public class Pratica62 {
 
         time = new Time();
  
-        time.adicionaJogador("The Good", new Jogador(1, "Squirtle"));
-        time.adicionaJogador("The Bad", new Jogador(2, "Charmander"));
-        time.adicionaJogador("The Ugly", new Jogador(3, "Bulbassaur"));
+        time.addJogador("The Good", new Jogador(1, "Squirtle"));
+        time.addJogador("The Bad", new Jogador(2, "Charmander"));
+        time.addJogador("The Ugly", new Jogador(3, "Bulbassaur"));
         
         for(Jogador j: time.ordena(new JogadorComparator(false, true, true))){
             System.out.println(j);

@@ -22,13 +22,13 @@ public class Time {
         return jogadores;
     }
     
-    public void adicionaJogador(String posicao, Jogador jogador) {
+    public void addJogador(String posicao, Jogador jogador) {
         jogadores.put(posicao, jogador);
     }
     
     public List<Jogador> ordena(JogadorComparator comparacao) {
-        List<Jogador> sortido = new ArrayList<>(jogadores.values());
-        Collections.sort(sortido, comparacao);
-        return sortido;
+        List<Jogador> arrumado = new ArrayList<>(jogadores.values());
+        Collections.sort(arrumado, comparacao);
+        return arrumado;
     }
 }
