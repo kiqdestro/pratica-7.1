@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  *
- * @author askoda
+ * @author kiqdestro
  */
 public class Time {
     private HashMap<String, Jogador> jogadores = new HashMap<>();

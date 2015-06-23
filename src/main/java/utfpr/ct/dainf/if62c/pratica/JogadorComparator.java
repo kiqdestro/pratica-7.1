@@ -9,7 +9,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author askoda
+ * @author kiqdestro
  */
 public class JogadorComparator implements Comparator<Jogador> {
     private boolean geral;
